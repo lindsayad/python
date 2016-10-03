@@ -1,0 +1,98 @@
+In [1]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+/home/lindsayad/yt-hg/yt/config.py:112: UserWarning: The configuration file /home/lindsayad/.yt/config is deprecated. Please migrate your config to /home/lindsayad/.config/yt/ytrc by running: 'yt config migrate'
+  warnings.warn(msg.format(_OLD_CONFIG_FILE, CURRENT_CONFIG_FILE))
+yt : [WARNING  ] 2016-09-13 12:56:13,169 name_glo_var not found
+yt : [WARNING  ] 2016-09-13 12:56:13,239 name_elem_var not found
+yt : [INFO     ] 2016-09-13 12:56:13,239 Loading coordinates
+yt : [INFO     ] 2016-09-13 12:56:13,240 Loading connectivity
+yt : [INFO     ] 2016-09-13 12:56:13,250 Parameters: current_time              = 0.025
+yt : [INFO     ] 2016-09-13 12:56:13,250 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2016-09-13 12:56:13,251 Parameters: domain_left_edge          = [-0.1 -0.1  0. ]
+yt : [INFO     ] 2016-09-13 12:56:13,251 Parameters: domain_right_edge         = [ 1.1  1.1  1. ]
+yt : [INFO     ] 2016-09-13 12:56:13,252 Parameters: cosmological_simulation   = 0
+yt : [INFO     ] 2016-09-13 12:56:13,252 Loading coordinates
+yt : [INFO     ] 2016-09-13 12:56:13,253 Loading connectivity
+yt : [WARNING  ] 2016-09-13 12:56:13,254 name_elem_var not found
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(141)select()
+-> mask = self._get_selector_mask(selector)
+(Pdb) s
+--Call--
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(161)_get_selector_mask()
+-> def _get_selector_mask(self, selector):
+(Pdb) l
+156  	
+157  	    def select_particles(self, selector, x, y, z):
+158  	        mask = selector.select_points(x,y,z, 0.0)
+159  	        return mask
+160  	
+161  ->	    def _get_selector_mask(self, selector):
+162  	        if hash(selector) == self._last_selector_id:
+163  	            mask = self._last_mask
+164  	        else:
+165  	            self._last_mask = mask = selector.fill_mesh_cell_mask(self)
+166  	            self._last_selector_id = hash(selector)
+(Pdb) n
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(162)_get_selector_mask()
+-> if hash(selector) == self._last_selector_id:
+(Pdb) 
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(163)_get_selector_mask()
+-> mask = self._last_mask
+(Pdb) 
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(171)_get_selector_mask()
+-> return mask
+(Pdb) p self._last_mask
+None
+(Pdb) p mask
+None
+(Pdb) n
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(142)select()
+-> count = self.count(selector)
+(Pdb) n
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(143)select()
+-> if count == 0: return 0
+(Pdb) p count
+0
+(Pdb) n
+--Return--
+> /home/lindsayad/yt-hg/yt/data_objects/unstructured_mesh.py(143)select()->0
+-> if count == 0: return 0
+(Pdb) 
+> /home/lindsayad/yt-hg/yt/frontends/exodus_ii/io.py(70)_read_fluid_selection()
+-> for g in chunk.objs:
+(Pdb) 
+> /home/lindsayad/yt-hg/yt/frontends/exodus_ii/io.py(72)_read_fluid_selection()
+-> if fname in self.elem_fields:
+(Pdb) 
+> /home/lindsayad/yt-hg/yt/frontends/exodus_ii/io.py(60)_read_fluid_selection()
+-> for field in fields:
+(Pdb) 
+> /home/lindsayad/yt-hg/yt/frontends/exodus_ii/io.py(79)_read_fluid_selection()
+-> return rv
+(Pdb) p rv
+{('connect1', 'vel_x'): array([[  6.90266968e-310,   6.90266968e-310,   3.08100918e-316,
+          3.08100918e-316,   2.59068285e-001,   3.25734951e-001],
+       [  3.92401618e-001,   4.59068285e-001,   5.25734951e-001,
+          5.92401618e-001,   6.59068285e-001,   7.25734951e-001],
+       [  7.92401618e-001,   8.59068285e-001,   9.25734951e-001,
+          9.92401618e-001,  -7.59838212e-003,   5.90682845e-002],
+       ..., 
+       [  6.63603903e-001,   6.63603903e-001,   6.63603903e-001,
+          6.63603903e-001,   6.63603903e-001,   6.63603903e-001],
+       [  6.63603903e-001,   6.63603903e-001,   7.30270570e-001,
+          7.30270570e-001,   7.30270570e-001,   7.30270570e-001],
+       [  7.30270570e-001,   7.30270570e-001,   7.30270570e-001,
+          7.30270570e-001,   7.30270570e-001,   7.30270570e-001]])}
+(Pdb) p data
+array([[ 0.04596902,  0.04434873,  0.03949548,  0.04566206,  0.0419517 ,
+         0.04298471],
+       [ 0.03873676,  0.04596902,  0.03949548,  0.0423709 ,  0.04298471,
+         0.03943337],
+       [ 0.03133811,  0.03866321,  0.03901953,  0.03508278,  0.03904129,
+         0.03516476],
+       ..., 
+       [ 0.02311066,  0.03641595,  0.01583121,  0.02993522,  0.02572325,
+         0.0201947 ],
+       [ 0.08596742,  0.07686355,  0.07855889,  0.08138   ,  0.07779747,
+         0.08239133],
+       [ 0.07040854,  0.07855889,  0.07686355,  0.07446221,  0.07779747,
+         0.07381263]])

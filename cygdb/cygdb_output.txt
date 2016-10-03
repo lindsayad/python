@@ -1,0 +1,32 @@
+(gdb) cy run python_file.py
+499500
+[23614 refs]
+
+warning: the debug information found in "/lib64/ld-2.23.so" does not match "/lib64/ld-linux-x86-64.so.2" (CRC mismatch).
+(gdb) cy break cython_file.big_sum
+Breakpoint 1 at 0x7ffff696b4eb: file cython_file.c, line 764.
+(gdb) cy run python_file.py
+3    def big_sum():
+(gdb) cy list
+     1    cimport cython
+     2    
+>    3    def big_sum():
+     4        cdef int a[10000]
+     5    
+     6        for i in range(10000):
+     7            a[i] = i
+(gdb) cy break cython_file:6
+Breakpoint 2 at 0x7ffff696b540: file cython_file.c, line 783.
+(gdb) cy cont
+791      for (__pyx_t_1 = 0; __pyx_t_1 < 0x2710; __pyx_t_1+=1) {
+(gdb) cy list
+   786     * 
+   787     *     for i in range(10000):             # <<<<<<<<<<<<<<
+   788     *         a[i] = i
+   789     *     # <==================== I want to put a break here
+   790     */
+>  791      for (__pyx_t_1 = 0; __pyx_t_1 < 0x2710; __pyx_t_1+=1) {
+   792        __pyx_v_i = __pyx_t_1;
+   793    
+   794        /* "cython_file.pyx":7
+   795     * 

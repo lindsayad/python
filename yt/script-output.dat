@@ -1,0 +1,159 @@
+In [14]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9988440710298494 dimensionless
+-0.002393185939105783 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [15]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9974716025347117 dimensionless
+-0.0066861684688655455 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [16]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9994576654266325 dimensionless
+-0.004051883337260515 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [17]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.998042187005161 dimensionless
+-0.006536063944078565 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [18]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9912383878578752 dimensionless
+-0.009476485101561403 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [19]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9949769849605951 dimensionless
+-0.009065102832486112 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [20]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9933637696507807 dimensionless
+-0.006769244944538914 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [21]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.05555555555555555 dimensionless
+0.0 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [22]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9998091190235802 dimensionless
+-0.004003497880627125 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [23]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9980389687703642 dimensionless
+-0.0055024876772442315 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [24]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9954628733516206 dimensionless
+-0.00760230975498584 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [25]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9966659974602947 dimensionless
+-0.004588965669003781 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [26]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9991146200549195 dimensionless
+-0.002138777972750099 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [27]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9999573238064755 dimensionless
+-0.004641651696640877 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [28]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.994414684306712 dimensionless
+-0.007016776741122517 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [29]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9954113463155219 dimensionless
+-0.008241755265297284 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [30]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9996178433737383 dimensionless
+-0.005784719735805894 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+6.9433587895079e-310 code_length
+-0.5258649900475596 code_length
+
+In [31]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9933904254617358 dimensionless
+-0.00663218834536091 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [32]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9957423304216627 dimensionless
+-0.009016672174890425 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
+
+In [33]: %run ~/gdrive/python/yt/yt-exodus-data-handling.py
+0.9669117962081324 dimensionless
+-0.019593246439135743 dimensionless
+0.15100950823910986 dimensionless
+0.0 dimensionless
+1.0 code_length
+0.0 code_length
