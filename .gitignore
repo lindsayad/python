@@ -9,3 +9,4 @@ CopiedReloadPlugin.xml
 *.pyc
 *.out
 *#*
+.ipynb_checkpoints

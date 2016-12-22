@@ -1,0 +1,50 @@
+import yt
+yt.load("396-reactor-height-converged.e", step=-1)
+ds = yt.load("396-reactor-height-converged.e", step=-1)
+sl = yt.SlicePlot(ds, 'z', ('connect1', 'temperature'))
+dir(ds)
+ds.index
+ds.index.meshes
+ds.index.meshes[0]
+sl = yt.SlicePlot(ds, 'z', ('connect1', 'temp'))
+sls.save()
+sl.save()
+group1_lin = yt.SlicePlot(ds, 'z', ('connect1', 'group1_lin'))
+group1_lin.save("group1_lin.png")
+ad = ds.all_data()
+ad
+dir(ad)
+ad[('connect1', 'temp')]
+ad[('connect1', 'temp')].max()
+ad[('connect1', 'temp')].min()
+ad[('connect2', 'temp')].min()
+ad[('connect2', 'temp')]
+temp_fuel = ad[('connect1', 'temp')]
+group1_fuel = ad[('connect1', 'group1_lin')]
+group2_fuel = ad[('connect1', 'group2_lin')]
+group2_mod = ad[('connect2', 'group2_lin')]
+group2_fuel.max()
+group2_mod.max()
+ad[('temp')]
+ad['temp']
+ad['group2_lin'].max()
+temp_all_slice = yt.SlicePlot(ds, 'z', ('temp'))
+temp_all_slice.save("temp_whole_domain")
+dir(temp_all_slice)
+temp_all_slice.ylim
+temp_all_slice.bounds
+temp_all_slice.set_zlim
+temp_all_slice.set_zlim(0, 4000)
+temp_all_slice.set_zlim(zmin=0, zmax=4000)
+temp_all_slice.set_zlim('temp', zmin=0, zmax=4000)
+temp_all_slice.save("temp_whole_domain.png")
+cd ~/gdrive/python/yt/
+should_work_ds = yt.load("RZ_p_no_parts_do_nothing_bcs_cone_out.e", step=-1)
+flow_ad = should_work_ds.all_data()
+flow_ad['u']
+flow_slice = yt.SlicePlot(should_work_ds, 'z', ('u'))
+flow_slice.save("u_slice.png")
+pwd
+%history > history.txt
+ls -lrth
+%history
