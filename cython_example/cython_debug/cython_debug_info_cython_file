@@ -1,0 +1,66 @@
+<cython_debug version="1.0">
+  <Module c_filename="/home/lindsayad/python/cython_example/cython_file.c" filename="/home/lindsayad/python/cython_example/cython_file.pyx" module_name="cython_file">
+    <Functions>
+      <Function cname="__pyx_pw_11cython_file_1big_sum" lineno="3" name="big_sum" pf_cname="" qualified_name="cython_file.big_sum">
+        <Locals>
+          <LocalVar cname="__pyx_v_a" lineno="4" name="a" qualified_name="cython_file.big_sum.a" type="CObject"/>
+          <LocalVar cname="__pyx_v_i" lineno="6" name="i" qualified_name="cython_file.big_sum.i" type="CObject"/>
+          <LocalVar cname="__pyx_v_my_sum" lineno="9" name="my_sum" qualified_name="cython_file.big_sum.my_sum" type="CObject"/>
+        </Locals>
+        <Arguments/>
+        <StepIntoFunctions/>
+      </Function>
+      <Function cname="initcython_file" is_initmodule_function="True" lineno="1" name="cython_file" pf_cname="" qualified_name="">
+        <Locals>
+          <LocalVar cname="__pyx_v_11cython_file_cython" lineno="1" name="cython" qualified_name="cython_file.cython" type="PythonObject"/>
+          <LocalVar cname="big_sum" lineno="3" name="big_sum" qualified_name="cython_file.big_sum" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___builtins__" lineno="0" name="__builtins__" qualified_name="cython_file.__builtins__" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___file__" lineno="0" name="__file__" qualified_name="cython_file.__file__" type="PythonObject"/>
+          <LocalVar cname="__pyx_ctuple_long" lineno="6" name="__pyx_ctuple_long_struct" qualified_name="cython_file.__pyx_ctuple_long_struct" type="CObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___path__" lineno="0" name="__path__" qualified_name="cython_file.__path__" type="PythonObject"/>
+          <LocalVar cname="__test__" lineno="1" name="__test__" qualified_name="cython_file.__test__" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___name__" lineno="0" name="__name__" qualified_name="cython_file.__name__" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___doc__" lineno="0" name="__doc__" qualified_name="cython_file.__doc__" type="PythonObject"/>
+          <LocalVar cname="__pyx_ctuple_long" lineno="6" name="__pyx_ctuple_long" qualified_name="cython_file.__pyx_ctuple_long" type="CObject"/>
+        </Locals>
+        <Arguments/>
+        <StepIntoFunctions/>
+      </Function>
+      <Function cname="PyInit_cython_file" is_initmodule_function="True" lineno="1" name="cython_file" pf_cname="" qualified_name="">
+        <Locals>
+          <LocalVar cname="__pyx_v_11cython_file_cython" lineno="1" name="cython" qualified_name="cython_file.cython" type="PythonObject"/>
+          <LocalVar cname="big_sum" lineno="3" name="big_sum" qualified_name="cython_file.big_sum" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___builtins__" lineno="0" name="__builtins__" qualified_name="cython_file.__builtins__" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___file__" lineno="0" name="__file__" qualified_name="cython_file.__file__" type="PythonObject"/>
+          <LocalVar cname="__pyx_ctuple_long" lineno="6" name="__pyx_ctuple_long_struct" qualified_name="cython_file.__pyx_ctuple_long_struct" type="CObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___path__" lineno="0" name="__path__" qualified_name="cython_file.__path__" type="PythonObject"/>
+          <LocalVar cname="__test__" lineno="1" name="__test__" qualified_name="cython_file.__test__" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___name__" lineno="0" name="__name__" qualified_name="cython_file.__name__" type="PythonObject"/>
+          <LocalVar cname="__pyx_v_11cython_file___doc__" lineno="0" name="__doc__" qualified_name="cython_file.__doc__" type="PythonObject"/>
+          <LocalVar cname="__pyx_ctuple_long" lineno="6" name="__pyx_ctuple_long" qualified_name="cython_file.__pyx_ctuple_long" type="CObject"/>
+        </Locals>
+        <Arguments/>
+        <StepIntoFunctions/>
+      </Function>
+    </Functions>
+    <Globals>
+      <LocalVar cname="__pyx_v_11cython_file_cython" lineno="1" name="cython" qualified_name="cython_file.cython" type="PythonObject"/>
+      <LocalVar cname="__pyx_v_11cython_file___builtins__" lineno="0" name="__builtins__" qualified_name="cython_file.__builtins__" type="PythonObject"/>
+      <LocalVar cname="__pyx_v_11cython_file___file__" lineno="0" name="__file__" qualified_name="cython_file.__file__" type="PythonObject"/>
+      <LocalVar cname="__pyx_v_11cython_file___path__" lineno="0" name="__path__" qualified_name="cython_file.__path__" type="PythonObject"/>
+      <LocalVar cname="__test__" lineno="1" name="__test__" qualified_name="cython_file.__test__" type="PythonObject"/>
+      <LocalVar cname="__pyx_v_11cython_file___name__" lineno="0" name="__name__" qualified_name="cython_file.__name__" type="PythonObject"/>
+      <LocalVar cname="__pyx_v_11cython_file___doc__" lineno="0" name="__doc__" qualified_name="cython_file.__doc__" type="PythonObject"/>
+    </Globals>
+    <LineNumberMapping>
+      <LineNumber c_linenos="1067 1068 1069 1070 1071 1072 1073 1074 1075 1076 1077 1078 1079 1080 1081 1082 1083 1084 1085 1086 1087 1088 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098" cython_lineno="1"/>
+      <LineNumber c_linenos="782 783 784 785 786 787 788 789 790 791 792 793 794 795 796 797 798 799 800 801 802 803 804 805 806 807 808 809 810 811 812 813 874 875 876 877 878 879 880 881 882 883 884 885 886 887 888 889 890 891 892 893 894 895 896 897 898 899 900 901 902 903 904 905 906 907 908 909 910 911 912 913 914 938 939 940 941 942 943 944 945 946 947 948 949 950 951 952 953 954 955 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 1066" cython_lineno="3"/>
+      <LineNumber c_linenos="814 815 816 817 818 819 820 821 822 823" cython_lineno="6"/>
+      <LineNumber c_linenos="824 825 826 827 828 829 830 831 832 833" cython_lineno="7"/>
+      <LineNumber c_linenos="834 835 836 837 838 839 840 841 842" cython_lineno="10"/>
+      <LineNumber c_linenos="843 844 845 846 847 848 849 850 851 852" cython_lineno="11"/>
+      <LineNumber c_linenos="853 854 855 856 857 858 859 860 861" cython_lineno="12"/>
+      <LineNumber c_linenos="862 863 864 865 866 867 868 869 870 871 872 873" cython_lineno="13"/>
+    </LineNumberMapping>
+  </Module>
+</cython_debug>

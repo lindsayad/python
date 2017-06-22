@@ -1,5 +1,3 @@
-#!/usr/bin/python
-#
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
@@ -28,5 +26,5 @@ ax.ticklabel_format(style='sci')
 #xlabel.set_fontsize(figureFontSize)
 #ax.get_yticklabels().set_fontsize(figureFontSize)
 #
-plt.savefig('NO_uptake_plot.eps',format='eps')
+# plt.savefig('NO_uptake_plot.eps',format='eps')
 plt.show()

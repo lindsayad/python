@@ -1,0 +1,11 @@
+python
+import sys
+print(sys.path)
+import gdb
+try:
+    gdb.lookup_type('PyModuleObject')
+except RuntimeError:
+    sys.stderr.write(
+        'Python was not compiled with debug symbols (or it was '
+        'stripped). Some functionality may not work (properly).\\n')
+end

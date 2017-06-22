@@ -1,3 +1,5 @@
+*.e
+*.txt
 visitlog.py
 visit/copiedScripts/
 *.png

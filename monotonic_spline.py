@@ -127,22 +127,22 @@ def sample(x, xarr, farr, darr):
             return p(xarr[i+1], xarr[i], farr[i+1], farr[i], darr[i+1], darr[i], x)
 
 
-# x = np.array([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15])
-# y = np.array([10, 10, 10, 10, 10, 10, 10.5, 15, 50, 60, 85])
+x = np.array([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15])
+y = np.array([10, 10, 10, 10, 10, 10, 10.5, 15, 50, 60, 85])
 # x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 # y = np.array([0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000])
 # y = np.array([0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100])
 # x = np.array([0, 1, 2])
 # y = np.array([0, 1, 8])
 # y = np.array([0, 1, 4])
-x = np.array([0, 2, 4, 6, 8, 10])
+# x = np.array([0, 2, 4, 6, 8, 10])
 # y = np.array([0, 8, 64, 216, 512, 1000])
-y = np.array([0, 4, 16, 36, 64, 100])
-n_knots = x.size
-n_I = x.size - 1
-harr = np.zeros((n_I))
-for i in range(n_I):
-    harr[i] = x[i+1] - x[i]
+# y = np.array([0, 4, 16, 36, 64, 100])
+# n_knots = x.size
+# n_I = x.size - 1
+# harr = np.zeros((n_I))
+# for i in range(n_I):
+#     harr[i] = x[i+1] - x[i]
 # print(calc_derivs(x, y, harr))
 darr = spline(x,y)
 print(darr)

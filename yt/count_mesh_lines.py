@@ -1,0 +1,3 @@
+from yt.visualization.tests.test_mesh_slices import test_perfect_element_intersection
+
+test_perfect_element_intersection()
