@@ -12,4 +12,5 @@ lines = []
 lines.append(yt.LineBuffer(ds, [0, 0.5, 0], [1, 0.5, 0], 100, label='y = 0.5'))
 lines.append(yt.LineBuffer(ds, [0, 0.25, 0], [1, 0.25, 0], 100, label='y = 0.25'))
 plt = yt.LinePlot.from_lines(ds, [('all', 'vel_x')], lines)
+plt.annotate_legend(('all', 'vel_x'))
 plt.save("single_field_multi_lines.png")
