@@ -36,26 +36,24 @@ def arnoldi_iteration(A,b,nimp):
          Q[:, n+1] = q
      return Q, h
 
-def GMRes(A, b, x0, e, nmax_iter, restart=None):
+def GMRes(A, b, x0, nmax_iter, restart=None):
     r = b - np.asarray(np.dot(A, x0)).reshape(-1)
 
     x = []
     q = [0] * (nmax_iter)
 
-    x.append(r)
-
     q[0] = r / np.linalg.norm(r)
 
     h = np.zeros((nmax_iter + 1, nmax_iter))
 
-    for k in range(nmax_iter):
+    for k in range(min(nmax_iter, A.shape[0])):
         y = np.asarray(np.dot(A, q[k])).reshape(-1)
 
-        for j in range(k):
+        for j in range(k + 1):
             h[j, k] = np.dot(q[j], y)
             y = y - h[j, k] * q[j]
         h[k + 1, k] = np.linalg.norm(y)
-        if (h[k + 1, k] != 0 and k != nmax_iter - 1):
+        if (h[k + 1, k] > 1e-10 and k != nmax_iter - 1):
             q[k + 1] = y / h[k + 1, k]
 
         b = np.zeros(nmax_iter + 1)
@@ -164,3 +162,4 @@ def newton():
 ini = np.array([0.5, 0.5])
 x, its, q = preGMRes(J(ini), R(ini), np.array([0, 0]))
 xso, itsso, qso = preGMRes(np.array([[1, 1], [3, -4]]), np.array([3, 2]), np.array([1, 2]))
+bad_x = GMRes(np.array([[1, 1], [3, -4]]), np.array([3, 2]), np.array([1, 2]), 5)
