@@ -105,9 +105,9 @@ def myGMRes(A, b):
     return x
 
 def preGMRes(A, b):
-    preMat = np.linalg.inv(A)
+    # preMat = np.linalg.inv(A)
     # preMat = blockPreMat(A)
-    # preMat = np.identity(2)
+    preMat = np.identity(2)
 
     true_ini_resid = b - np.asarray(np.dot(A, np.array([0, 0]))).reshape(-1)
     precond_ini_resid = np.dot(preMat, b - np.dot(A, np.array([0, 0])))
@@ -116,23 +116,23 @@ def preGMRes(A, b):
     x = []
     norm = beta
     max_its = 30
-    its = -1
+    its = 0
     m = 1
 
     while norm / beta > 1e-6 and its < max_its:
         h = np.zeros((m+1, m))
         q = []
         q.append(precond_ini_resid / beta)
-        for j in range(m):
-            wj = np.dot(preMat, np.dot(A, q[j]))
-            for i in range(j):
-                h[i][j] = np.dot(wj, q[i])
-                wj = wj - h[i][j] * q[i]
-            h[j+1][j] = np.linalg.norm(wj)
-            if h[j+1][j] == 0:
-                m = j
+        for j in range(1, m + 1):
+            wj = np.dot(preMat, np.dot(A, q[j-1]))
+            for i in range(1, j + 1):
+                h[i-1][j-1] = np.dot(wj, q[i-1])
+                wj = wj - h[i-1][j-1] * q[i-1]
+            h[j][j-1] = np.linalg.norm(wj)
+            if h[j][j-1] == 0:
+                m = j + 1
                 break
-            q.append(wj / h[j+1][j])
+            q.append(wj / h[j][j-1])
 
         e1 = np.zeros(m + 1)
         e1[0] = beta
@@ -143,7 +143,7 @@ def preGMRes(A, b):
         norm = np.linalg.norm(np.dot(preMat, b - np.dot(A, xm)))
         its += 1
 
-    return x, its
+    return x, its, q
 
 def blockPreMat(A):
     return np.linalg.inv(np.diag(np.diag(A)))
@@ -162,4 +162,4 @@ def newton():
     return x
 
 ini = np.array([0.5, 0.5])
-x, its = preGMRes(J(ini), R(ini))
+x, its, q = preGMRes(J(ini), R(ini))
