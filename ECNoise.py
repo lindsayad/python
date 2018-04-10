@@ -1,6 +1,15 @@
 from math import sqrt, fabs
 import numpy as np
 
+def higham(t, L):
+    f = t
+    for k in range(1, L + 1):
+        f = sqrt(f)
+    for k in range(1, L + 1):
+        f = f**2
+    f = f**2
+    return f
+
 #
 #  Determines the noise of a function from the function values
 #
@@ -53,37 +62,34 @@ def ECNoise(nf, fval):
 
     # Construct the difference table.
     for j in range(nf-1):
-        for i in range(nf-j):
+        for i in range(nf-(j+1)):
             fval[i] = fval[i+1] - fval[i]
 
         # h is too small only when half the function values are equal.
-        if (j==0 && sum([fval[k] == 0 for k in range(nf - 1)]) >= nf/2):
+        if (j==0 and sum([fval[k] == 0 for k in range(nf - 1)]) >= nf/2):
             inform = 2
             return fnoise, level, inform
 
-        gamma = 0.5*((j+1)/(2*(j+1)-1))*gamma
+        gamma = 0.5*((j+1.)/(2.*(j+1.)-1.))*gamma
 
         # Compute the estimates for the noise level.
-        level[j] = sqrt(gamma*np.mean(np.square(fval[0:nf-j])))
+        level[j] = sqrt(gamma*np.mean(np.square(fval[0:nf-(j+1)])))
 
         # Determine differences in sign.
-        emin = np.amin(fval[0:nf-j])
-        emax = np.amax(fval[0:nf-j])
+        emin = np.amin(fval[0:nf-(j+1)])
+        emax = np.amax(fval[0:nf-(j+1)])
         if (emin*emax < 0.0):
             dsgn[j] = 1
 
     # Determine the noise level.
     for k in range(nf-3):
-        emin = np.amin(level[k:k+2))
-        emax = np.amax(level(k:k+2))
-        if (emax<=4*emin && dsgn(k))
-            fnoise = level(k)
+        emin = np.amin(level[k:k+3])
+        emax = np.amax(level[k:k+3])
+        if (emax<=4*emin and dsgn[k]):
+            fnoise = level[k]
             inform = 1
-            return
-        end
-    end
+            return fnoise, level, inform
 
     # If noise not detected then h is too large.
     inform = 3
-
-return
+    return fnoise, level, inform
