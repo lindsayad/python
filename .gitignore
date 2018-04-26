@@ -13,3 +13,4 @@ CopiedReloadPlugin.xml
 *#*
 .ipynb_checkpoints
 *.eps
+.pytest_cache
